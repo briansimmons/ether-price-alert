@@ -16,8 +16,6 @@ def get_price_24hr()
   uri = URI(url)
   response = Net::HTTP.get(uri)
   value = JSON.parse(response)
-  value["Data"]["Data"][0]["close"]
+  value["RAW"]["CHANGEPCT24HOUR"]
 end
 
-
-  
